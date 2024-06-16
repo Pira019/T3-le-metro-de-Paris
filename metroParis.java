@@ -2,9 +2,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class metroParis {
+import service.ServiceMetro;
+
+public class MetroParis {
 
 	public static void main(String[] args) {
+		
+		ServiceMetro serviceMetro = new ServiceMetro();
 		
 		
 		readFile();
@@ -49,7 +53,7 @@ public class metroParis {
 		    	  if(data.contains("$"))
 		    		  	break;
 		         String line[]=data.split(" ");
-			      System.out.println("La station numéro  " + Integer.parseInt(data.substring(0, 3)) + "  se nomme " + data.substring(5));
+			      System.out.println("La station numï¿½ro  " + Integer.parseInt(data.substring(0, 3)) + "  se nomme " + data.substring(5));
 
 		      }
 		      while (myReader.hasNextLine() ) {
@@ -57,7 +61,7 @@ public class metroParis {
 			    	  if(data.contains("$"))
 			    		  	break;
 			         String line[]=data.split(" ");
-				      System.out.println("La station numéro  " + Integer.parseInt(line[0]) + "  a la position en x :  " + Integer.parseInt(line[1]) + "  a la position en x :  " + Integer.parseInt(line[2]));
+				      System.out.println("La station numï¿½ro  " + Integer.parseInt(line[0]) + "  a la position en x :  " + Integer.parseInt(line[1]) + "  a la position en x :  " + Integer.parseInt(line[2]));
 
 			    }
 		      while (myReader.hasNextLine() ) {
@@ -70,7 +74,7 @@ public class metroParis {
 			      }
 		      myReader.close();
 		    } catch (FileNotFoundException e) {
-		      System.out.println("Le fichier ne semble pas exister à l'emplacment donnée.");
+		      System.out.println("Le fichier ne semble pas exister ï¿½ l'emplacment donnï¿½e.");
 		      e.printStackTrace();
 		    }
 		
@@ -94,7 +98,7 @@ public class metroParis {
 	
 		
 	
-	//retourne la liste des stations qui, si elles sont fermés, rendent au moins une station innateignable
+	//retourne la liste des stations qui, si elles sont fermï¿½s, rendent au moins une station innateignable
 	public ArrayList<Station> stationsCritiques()
 	{
 		
