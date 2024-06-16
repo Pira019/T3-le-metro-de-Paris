@@ -1,9 +1,17 @@
 
 public class Station {
 	
+	 
+	public Station() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	private String Nom;
-	private int numéro; 
+	private int numero; 
 	
-	/* completez à votre guise*/
+	private int positionX;
+    private int positionY;
+	
+	/* completez ï¿½ votre guise*/
 
 }
